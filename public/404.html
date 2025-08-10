@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      /* SPA GitHub Pages redirect script */
+      (function() {
+        var l = window.location;
+        var base = '/WorkoutWish'; // Must match vite.config.js base (without trailing slash at end here)
+        // Preserve path so the app (if needed) could read it; React Router will manage after load
+        sessionStorage.setItem('spa-github-path', l.pathname + l.search + l.hash);
+        // Always redirect to the base index
+        l.replace(base + '/');
+      })();
+    </script>
+    <style>
+      html,body {background:#0f0f0f;color:#fff;font-family:system-ui,Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}
+      .msg {opacity:.75;font-size:14px;text-align:center;letter-spacing:.5px;}
+    </style>
+  </head>
+  <body>
+    <div class="msg">Redirecting...</div>
+  </body>
+</html>
