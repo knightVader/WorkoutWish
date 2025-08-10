@@ -6,4 +6,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/WorkoutWish/',
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        // Ensure proper file extensions for GitHub Pages
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash].[ext]'
+      }
+    }
+  }
 })
