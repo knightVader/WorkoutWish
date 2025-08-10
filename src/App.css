@@ -1,0 +1,10 @@
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+main {
+  flex: 1;
+}
+
+/* App-specific styles will go here */
